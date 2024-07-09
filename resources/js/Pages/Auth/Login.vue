@@ -1,12 +1,8 @@
 <script setup>
-    import { Head, Link, useForm } from '@inertiajs/vue3';
-    import Checkbox from '@/Components/Checkbox.vue';
-    import InputError from '@/Components/InputError.vue';
-    import InputLabel from '@/Components/InputLabel.vue';
-    import PrimaryButton from '@/Components/PrimaryButton.vue';
-    import TextInput from '@/Components/TextInput.vue';
+    import { Head, useForm } from '@inertiajs/vue3';
+    import InputError from '@/Components/Shared/InputError.vue';
+    import PrimaryButton from '@/Components/Shared/PrimaryButton.vue';
     import MainLayout from '@/Layouts/MainLayout.vue';
-    import GuestLayout from '@/Layouts/_GuestLayout.vue';
 
     defineProps({
         canResetPassword: {
@@ -32,7 +28,7 @@
 
 <template>
     <Head title="Log in" />
-    <MainLayout>
+    <main-layout>
         <div class="mb-4 text-sm font-medium text-green-600" v-if="status">
             {{ status }}
         </div>
@@ -98,5 +94,5 @@
                 </PrimaryButton>
             </div>
         </form>
-    </MainLayout>
+    </main-layout>
 </template>

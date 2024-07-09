@@ -8,4 +8,5 @@ export interface IErrors {
 export interface IForm {
     title: string;
     content: string;
+    image: File | null;
 }

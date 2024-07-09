@@ -1,10 +1,9 @@
 <script setup lang="ts">
     import { Head } from '@inertiajs/vue3';
+    import DeleteUserForm from '@/Components/Profile/DeleteUserForm.vue';
+    import UpdatePasswordForm from '@/Components/Profile/UpdatePasswordForm.vue';
+    import UpdateProfileInformationForm from '@/Components/Profile/UpdateProfileInformationForm.vue';
     import MainLayout from '@/Layouts/MainLayout.vue';
-    import AuthenticatedLayout from '@/Layouts/_AuthenticatedLayout.vue';
-    import DeleteUserForm from './Partials/DeleteUserForm.vue';
-    import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
-    import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
 
     defineProps<{
         mustVerifyEmail?: boolean;
@@ -15,7 +14,7 @@
 <template>
     <Head title="Profile" />
 
-    <MainLayout>
+    <main-layout>
         <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
             <div class="bg-white p-4 shadow sm:rounded-lg sm:p-8">
                 <UpdateProfileInformationForm
@@ -33,5 +32,5 @@
                 <DeleteUserForm class="max-w-xl" />
             </div>
         </div>
-    </MainLayout>
+    </main-layout>
 </template>

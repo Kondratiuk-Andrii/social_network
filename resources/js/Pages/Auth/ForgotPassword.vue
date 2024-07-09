@@ -1,10 +1,10 @@
 <script setup lang="ts">
     import { Head, useForm } from '@inertiajs/vue3';
-    import InputError from '@/Components/InputError.vue';
-    import InputLabel from '@/Components/InputLabel.vue';
-    import PrimaryButton from '@/Components/PrimaryButton.vue';
-    import TextInput from '@/Components/TextInput.vue';
-    import GuestLayout from '@/Layouts/_GuestLayout.vue';
+    import InputError from '@/Components/Shared/InputError.vue';
+    import InputLabel from '@/Components/Shared/InputLabel.vue';
+    import PrimaryButton from '@/Components/Shared/PrimaryButton.vue';
+    import TextInput from '@/Components/Shared/TextInput.vue';
+    import MainLayout from '@/Layouts/MainLayout.vue';
 
     defineProps<{
         status?: string;
@@ -20,9 +20,8 @@
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Forgot Password" />
-
+    <Head title="Forgot Password" />
+    <main-layout>
         <div class="mb-4 text-sm text-gray-600">
             Forgot your password? No problem. Just let us know your email address and we will email
             you a password reset link that will allow you to choose a new one.
@@ -58,5 +57,5 @@
                 </PrimaryButton>
             </div>
         </form>
-    </GuestLayout>
+    </main-layout>
 </template>

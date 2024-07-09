@@ -1,8 +1,8 @@
 <script setup lang="ts">
     import { Head, Link, useForm } from '@inertiajs/vue3';
     import { computed } from 'vue';
-    import PrimaryButton from '@/Components/PrimaryButton.vue';
-    import GuestLayout from '@/Layouts/_GuestLayout.vue';
+    import PrimaryButton from '@/Components/Shared/PrimaryButton.vue';
+    import MainLayout from '@/Layouts/MainLayout.vue';
 
     const props = defineProps<{
         status?: string;
@@ -18,9 +18,8 @@
 </script>
 
 <template>
-    <GuestLayout>
-        <Head title="Email Verification" />
-
+    <Head title="Email Verification" />
+    <main-layout>
         <div class="mb-4 text-sm text-gray-600">
             Thanks for signing up! Before getting started, could you verify your email address by
             clicking on the link we just emailed to you? If you didn't receive the email, we will
@@ -51,5 +50,5 @@
                 </Link>
             </div>
         </form>
-    </GuestLayout>
+    </main-layout>
 </template>

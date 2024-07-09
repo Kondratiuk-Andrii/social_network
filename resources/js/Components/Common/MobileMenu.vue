@@ -1,8 +1,6 @@
 <script setup lang="ts">
-    import { router } from '@inertiajs/vue3';
-    import DropdownLink from '@/Components/DropdownLink.vue';
-    import NavLink from '@/Components/NavLink.vue';
-    import { useUserStore } from '@/stores/user/User';
+    import NavLink from '@/Components/Shared/NavLink.vue';
+    import { useUserStore } from '@/store/user/User';
 
     const userStore = useUserStore();
 

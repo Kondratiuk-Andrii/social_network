@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import Header from '@/Layouts/Partials/Header.vue';
+    import Header from '@/Components/Common/Header.vue';
 </script>
 
 <template>

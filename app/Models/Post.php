@@ -12,4 +12,9 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $guarded = false;
+
+    public function getUrlAttribute()
+    {
+        return url('storage/'.$this->image);
+    }
 }

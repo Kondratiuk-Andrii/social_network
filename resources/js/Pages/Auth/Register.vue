@@ -1,9 +1,7 @@
 <script setup lang="ts">
-    import { Head, Link, useForm } from '@inertiajs/vue3';
-    import InputError from '@/Components/InputError.vue';
-    import InputLabel from '@/Components/InputLabel.vue';
-    import PrimaryButton from '@/Components/PrimaryButton.vue';
-    import TextInput from '@/Components/TextInput.vue';
+    import { Head, useForm } from '@inertiajs/vue3';
+    import InputError from '@/Components/Shared/InputError.vue';
+    import PrimaryButton from '@/Components/Shared/PrimaryButton.vue';
     import MainLayout from '@/Layouts/MainLayout.vue';
 
     const form = useForm({
@@ -24,7 +22,7 @@
 
 <template>
     <Head title="Register" />
-    <MainLayout>
+    <main-layout>
         <form
             class="mx-auto mb-4 max-w-md rounded bg-white px-8 pb-8 pt-6 shadow-md"
             @submit.prevent="submit"
@@ -105,5 +103,5 @@
                 </PrimaryButton>
             </div>
         </form>
-    </MainLayout>
+    </main-layout>
 </template>

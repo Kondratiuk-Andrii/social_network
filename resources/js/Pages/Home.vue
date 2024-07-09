@@ -5,9 +5,9 @@
 
 <template>
     <Head title="Home" />
-    <MainLayout>
+    <main-layout>
         <h1 class="text-3xl font-bold">Hello, World!</h1>
-    </MainLayout>
+    </main-layout>
 </template>
 
 <style scoped></style>

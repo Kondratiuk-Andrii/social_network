@@ -7,6 +7,7 @@ use App\Http\Requests\Post\UpdateRequest;
 use App\Http\Resources\Post\PostResource;
 use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Response;
 
 class PostController extends Controller
@@ -27,7 +28,13 @@ class PostController extends Controller
     {
 
         $data = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $path = Storage::disk('public')->put('/images', $request['image']);
+            $data['image'] = $path;
+        }
         $data['user_id'] = auth()->user()->id;
+
         Post::create($data);
 
         return redirect()->back()->with('message', 'Post created successfully');

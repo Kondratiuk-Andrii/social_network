@@ -1,11 +1,11 @@
 <script setup lang="ts">
     import { Link } from '@inertiajs/vue3';
     import { Ref, ref } from 'vue';
-    import Dropdown from '@/Components/Dropdown.vue';
-    import DropdownLink from '@/Components/DropdownLink.vue';
-    import NavLink from '@/Components/NavLink.vue';
-    import MobileMenu from '@/Layouts/Partials/MobileMenu.vue';
-    import { useUserStore } from '@/stores/user/User';
+    import MobileMenu from '@/Components/Common/MobileMenu.vue';
+    import Dropdown from '@/Components/Shared/Dropdown.vue';
+    import DropdownLink from '@/Components/Shared/DropdownLink.vue';
+    import NavLink from '@/Components/Shared/NavLink.vue';
+    import { useUserStore } from '@/store/user/User';
 
     const userStore = useUserStore();
     const isMenuOpen: Ref<boolean> = ref(false);

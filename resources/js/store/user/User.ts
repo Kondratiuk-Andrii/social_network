@@ -6,7 +6,8 @@ import { IUser } from '@/stores/user/types';
 export const useUserStore = defineStore(
     'User',
     () => {
-        const user = ref<IUser | null>(null);
+        // const user = ref<IUser | null>(null);
+        const user = ref<IUser | null>(usePage().props.auth.user);
         const isAuthenticated: Ref<boolean> = ref(false);
 
         watch(
@@ -29,7 +30,7 @@ export const useUserStore = defineStore(
     },
     {
         persist: {
-            paths: ['user', 'isAuthenticated'],
+            paths: ['isAuthenticated'],
             key: 'user',
         },
     }
