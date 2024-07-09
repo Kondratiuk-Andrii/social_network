@@ -5,8 +5,8 @@ import { OhVueIcon, addIcons } from 'oh-vue-icons';
 import * as MdIcons from 'oh-vue-icons/icons/md';
 import { createPinia } from 'pinia';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
+import { ZiggyVue } from 'ziggy-js';
 import { DefineComponent, createApp, h } from 'vue';
-import { ZiggyVue } from '../../vendor/tightenco/ziggy/src/js';
 import '../css/app.css';
 import './bootstrap';
 
